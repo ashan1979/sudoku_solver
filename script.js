@@ -15,7 +15,12 @@ const joinValues = () => {
     const inputs = document.querySelectorAll('input')
     inputs.forEach(input => {
         if (input.value) {
-
+            submission.push(input.value)
+        } else {
+            submission.push('.')
         }
     })
+    console.log(submission)
 }
+
+solveButton.addEventListener('click', joinValues)
