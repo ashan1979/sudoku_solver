@@ -9,6 +9,14 @@ for (let i = 0; i < squares; i++) {
     inputElement.setAttribute('type', 'number')
     inputElement.setAttribute('min', '1')
     inputElement.setAttribute('max', '9')
+    if (
+      ((i % 9 == 0))
+    ) {
+      inputElement.classList.add('add-section')
+    }
+
+
+
     puzzleBoard.appendChild(inputElement)
 }
 
@@ -30,6 +38,9 @@ const populateValues = (isSolvable, solution) => {
         inputs.forEach((input, i) => {
             input.value = solution[i]
         })
+        solutionDisplay.innerHTML = "This is the Answer"
+    } else {
+      solutionDisplay.innerHTML = "This is not solvable"
     }
 }
 

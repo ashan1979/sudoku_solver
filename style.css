@@ -10,3 +10,7 @@
     border-spacing: 0;
     border: 1px gray solid;
 }
+
+.add-section {
+    background-color: lightgray;
+}
