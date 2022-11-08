@@ -1,5 +1,6 @@
 const puzzleBoard = document.querySelector('#puzzle')
 const solveButton = document.querySelector('#solve-button')
+const solutionDisplay = document.querySelector('#solution')
 const squares = 81
 const submission = []
 
