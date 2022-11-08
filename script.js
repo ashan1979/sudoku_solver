@@ -23,6 +23,15 @@ const joinValues = () => {
     console.log(submission)
 }
 
+const populateValues = (isSolvable, solution) => {
+    const imput = document.querySelectorAll('input')
+    if (isSolvable && solution) {
+        inputs.forEach((input, i) => {
+            input.value = solution[i]
+        })
+    }
+}
+
 const solve = async () => {
     joinValues()
   const data = { numbers: submission.join('') }
@@ -47,4 +56,4 @@ const solve = async () => {
 
 }
 
-solveButton.addEventListener('click', joinValues)
+solveButton.addEventListener('click', solve)
